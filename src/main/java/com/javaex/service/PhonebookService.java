@@ -40,13 +40,22 @@ public class PhonebookService {
 
 		return count;
 	}
-	
+
 	// 수정폼
 	public PersonVo exeModifyForm(int no) {
 		System.out.println("PhonebookService.exeModifyForm()");
-		
-		PersonVo personVo=phonebookDao.personSelectOne(no);
-		
+
+		PersonVo personVo = phonebookDao.personSelectOne(no);
+
 		return personVo;
+	}
+
+	// 수정
+	public int exeModify(PersonVo personVo) {
+		System.out.println("PhonebookService.exeModify()");
+
+		int count = phonebookDao.personUpdate(personVo);
+
+		return count;
 	}
 }
