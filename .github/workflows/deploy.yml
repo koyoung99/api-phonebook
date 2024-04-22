@@ -1,11 +1,11 @@
 name: Deploy PhonebookApp 
 
 on:
-  workflow_dispatch:
+#  workflow_dispatch:
 
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
