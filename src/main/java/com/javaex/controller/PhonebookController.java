@@ -31,46 +31,4 @@ public class PhonebookController {
 		return phonebookList;
 	}
 
-	// 등록
-	@PostMapping("/api/write")
-	public int add(@RequestBody PersonVo personVo) {
-		System.out.println("PhonebookController.write()");
-
-		int count = phonebookService.exeInsert(personVo);
-
-		return count;
-	}
-
-	// 삭제
-	// @ResponseBody
-	@DeleteMapping(value = "/api/{personId}")
-	public int remove(@PathVariable(value = "personId") int no) {
-		System.out.println("PhonebookController.remove()");
-		System.out.println(no);
-
-		int count = phonebookService.exeRemove(no);
-
-		return count;
-	}
-
-	// 수정폼
-	@GetMapping(value = "/api/{personId}")
-	public PersonVo modifyForm(@PathVariable(value = "personId") int no) {
-		System.out.println("PhonebookController.modifyForm()");
-
-		PersonVo personVo = phonebookService.exeModifyForm(no);
-
-		return personVo;
-	}
-
-	// 수정
-	@PutMapping(value = "/api/modify")
-	public int modify(@RequestBody PersonVo personVo) {
-		System.out.println("PhonebookController.modify");
-
-		int count = phonebookService.exeModify(personVo);
-
-		return count;
-	}
-
 }

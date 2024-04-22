@@ -25,40 +25,4 @@ public class PhonebookDao {
 
 	}
 
-	// 등록
-	public int personInsert(PersonVo personVo) {
-		System.out.println("PhonebookDao.personInsert()");
-
-		int count = sqlSession.insert("phonebook.insert", personVo);
-
-		return count;
-	}
-
-	// 삭제
-	public int personbookDelete(int no) {
-		System.out.println("PhonebookDao.personbookDelete()");
-
-		int count = sqlSession.delete("phonebook.delete", no);
-
-		return count;
-	}
-
-	// 수정폼
-	public PersonVo personSelectOne(int no) {
-		System.out.println("PhonebookDao.personSelectOne()");
-
-		PersonVo personVo = sqlSession.selectOne("phonebook.selectOne", no);
-
-		return personVo;
-	}
-
-	// 수정
-	public int personUpdate(PersonVo personVo) {
-		System.out.println("PhonebookDao.personUpdate()");
-
-		int count = sqlSession.update("phonebook.update", personVo);
-
-		return count;
-	}
-
 }

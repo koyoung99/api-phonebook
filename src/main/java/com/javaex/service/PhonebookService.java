@@ -23,39 +23,4 @@ public class PhonebookService {
 		return phonebookList;
 	}
 
-	// 등록
-	public int exeInsert(PersonVo personVo) {
-		System.out.println("PhonebookService.exeInsert()");
-
-		int count = phonebookDao.personInsert(personVo);
-
-		return count;
-	}
-
-	// 삭제
-	public int exeRemove(int no) {
-		System.out.println("GuestbookService.exeRemove()");
-
-		int count = phonebookDao.personbookDelete(no);
-
-		return count;
-	}
-
-	// 수정폼
-	public PersonVo exeModifyForm(int no) {
-		System.out.println("PhonebookService.exeModifyForm()");
-
-		PersonVo personVo = phonebookDao.personSelectOne(no);
-
-		return personVo;
-	}
-
-	// 수정
-	public int exeModify(PersonVo personVo) {
-		System.out.println("PhonebookService.exeModify()");
-
-		int count = phonebookDao.personUpdate(personVo);
-
-		return count;
-	}
 }
