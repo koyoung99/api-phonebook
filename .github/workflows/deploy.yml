@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t koyoung99/phonebook:latest .
-        # run: docker build . -t koyoung99/guestbook:latest
+        # run: docker build . -t koyoung99/guestbook:late
 
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
